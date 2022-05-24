@@ -1,18 +1,18 @@
 // import all models
-// const Post = require('./Post');
+const Post = require('./Post');
 const User = require('./User');
 // const Vote = require('./Vote');
 // const Comment = require('./Comment');
 
 // create associations
-// User.hasMany(Post, {
-//   foreignKey: 'user_id'
-// });
+User.hasMany(Post, {
+  foreignKey: 'user_id'
+});
 
-// Post.belongsTo(User, {
-//   foreignKey: 'user_id',
-//   onDelete: 'SET NULL'
-// });
+Post.belongsTo(User, {
+  foreignKey: 'user_id',
+  onDelete: 'SET NULL'
+});
 
 // User.belongsToMany(Post, {
 //   through: Vote,
@@ -67,4 +67,4 @@ const User = require('./User');
 // });
 
 //module.exports = { User, Post, Vote, Comment };
-module.exports = { User };
+module.exports = { User, Post };

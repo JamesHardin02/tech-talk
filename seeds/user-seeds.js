@@ -54,7 +54,7 @@ const userdata = [
   }
 ];
 
-// takes all object of user data in userdata array and inserts each into Users model in db
+// takes all objects of user data in userdata array and inserts each into Users model in db
 const seedUsers = () => User.bulkCreate(userdata, {individualHooks: true});
 
 module.exports = seedUsers;

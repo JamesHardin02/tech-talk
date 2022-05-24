@@ -2,7 +2,7 @@ const router = require('express').Router();
 // api routes
 const apiRoutes = require('./api/');
 
-// if api route use api folder
+// use end api endpoints folder if /api
 router.use('/api', apiRoutes);
 
 module.exports = router;
