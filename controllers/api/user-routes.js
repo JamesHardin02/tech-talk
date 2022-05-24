@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User, Post, Comment, Vote } = require('../../models');
 
+// GET api/users/
 // get all users
 router.get('/', (req, res) => {
   User.findAll({
@@ -13,6 +14,8 @@ router.get('/', (req, res) => {
     });
 });
 
+// GET api/users/:id
+// get individual user
 router.get('/:id', (req, res) => {
   User.findOne({
     attributes: { exclude: ['password'] },
@@ -53,6 +56,8 @@ router.get('/:id', (req, res) => {
     });
 });
 
+// POST api/users/
+// creates a user
 // router.post('/', (req, res) => {
 //   // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
 //   User.create({

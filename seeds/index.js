@@ -4,7 +4,7 @@ const seedUsers = require('./user-seeds');
 // const seedVotes = require('./vote-seeds');
 
 const sequelize = require('../config/connection');
-
+// calls each module to insert data into models in db
 const seedAll = async () => {
   await sequelize.sync({ force: true });
   console.log('--------------');
