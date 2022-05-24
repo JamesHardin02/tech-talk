@@ -1,0 +1,21 @@
+{
+  "name": "tech-talk",
+  "version": "1.0.0",
+  "description": "A blog site to talk about technology",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamesHardin02/tech-talk.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JamesHardin02/tech-talk/issues"
+  },
+  "homepage": "https://github.com/JamesHardin02/tech-talk#readme"
+}
