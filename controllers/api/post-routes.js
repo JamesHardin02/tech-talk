@@ -78,19 +78,18 @@ router.get('/:id', (req, res) => {
     });
 });
 
-// router.post('/', withAuth, (req, res) => {
-//   // expects {title: 'Taskmaster goes public!', post_url: 'https://taskmaster.com/press', user_id: 1}
-//   Post.create({
-//     title: req.body.title,
-//     post_url: req.body.post_url,
-//     user_id: req.session.user_id
-//   })
-//     .then(dbPostData => res.json(dbPostData))
-//     .catch(err => {
-//       console.log(err);
-//       res.status(500).json(err);
-//     });
-// });
+router.post('/', withAuth, (req, res) => {
+  Post.create({
+    title: req.body.title,
+    post_url: req.body.post_url,
+    user_id: req.session.user_id
+  })
+    .then(dbPostData => res.json(dbPostData))
+    .catch(err => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
 // router.put('/upvote', withAuth, (req, res) => {
 //   // custom static method created in models/Post.js
