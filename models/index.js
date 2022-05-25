@@ -2,7 +2,7 @@
 const Post = require('./Post');
 const User = require('./User');
 const Vote = require('./Vote');
-// const Comment = require('./Comment');
+const Comment = require('./Comment');
 
 // create associations
 // One to many relationship between user and post
@@ -52,24 +52,27 @@ Post.hasMany(Vote, {
   foreignKey: 'post_id'
 });
 
-// Comment.belongsTo(User, {
-//   foreignKey: 'user_id',
-//   onDelete: 'SET NULL'
-// });
+// one to one relatioship between a comment and a user
+// and a comment and a post
+Comment.belongsTo(User, {
+  foreignKey: 'user_id',
+  onDelete: 'SET NULL'
+});
 
-// Comment.belongsTo(Post, {
-//   foreignKey: 'post_id',
-//   onDelete: 'SET NULL'
-// });
+Comment.belongsTo(Post, {
+  foreignKey: 'post_id',
+  onDelete: 'SET NULL'
+});
 
-// User.hasMany(Comment, {
-//   foreignKey: 'user_id',
-//   onDelete: 'SET NULL'
-// });
+// One to many relationship between a user and their comments
+// and a post and its comments
+User.hasMany(Comment, {
+  foreignKey: 'user_id',
+  onDelete: 'SET NULL'
+});
 
-// Post.hasMany(Comment, {
-//   foreignKey: 'post_id'
-// });
+Post.hasMany(Comment, {
+  foreignKey: 'post_id'
+});
 
-//module.exports = { User, Post, Vote, Comment };
-module.exports = { User, Post, Vote };
+module.exports = { User, Post, Vote, Comment };
