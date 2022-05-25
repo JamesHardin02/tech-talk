@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech-Talk</title>
+  {{!-- fontawesome --}}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  {{!-- custom css stylesheet --}}
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>
+        <i class="fa-solid fa-globe"></i><a href="/">Tech-Talk</a>
+      </h1>
+      <nav>
+        {{#if loggedIn}}
+        <a href="/dashboard">dashboard</a>
+        <button id="logout" class="btn-no-style">logout</button>
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
+      </nav>
+    </header>
+    <main>
+      {{{ body }}}
+    </main>
+    <footer>
+      Thanks for visiting!
+    </footer>
+  </div>
+  
+  {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
