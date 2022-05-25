@@ -79,6 +79,7 @@ router.post('/', (req, res) => {
     });
 });
 
+// checks user credentials and creates session data
 // POST api/users/login
 router.post('/login', (req, res) => {
   User.findOne({
@@ -109,6 +110,8 @@ router.post('/login', (req, res) => {
   });
 });
 
+// destroys current session
+// POST api/users/logout
 router.post('/logout', (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
@@ -120,6 +123,8 @@ router.post('/logout', (req, res) => {
   }
 });
 
+// update user information
+// PUT api/users/:id
 router.put('/:id', (req, res) => {
   // pass in req.body instead to only update what's passed through
   User.update(req.body, {
@@ -141,6 +146,8 @@ router.put('/:id', (req, res) => {
     });
 });
 
+// delete account
+// DELETE api/users/:id
 router.delete('/:id', (req, res) => {
   User.destroy({
     where: {

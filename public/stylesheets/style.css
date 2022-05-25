@@ -36,6 +36,26 @@ button:hover {
   background-color: #3486eb;
 }
 
+.flex{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.login-page-h1{
+  text-align: center;
+  color: #0582b8;
+}
+
+.tech-tree{
+  width: 350px;
+  height: 350px;
+  object-fit: contain;
+}
+
+.login-signup-head{
+  font-weight: bold;
+}
+
 .post-list {
   margin: 0;
   padding: 0;
