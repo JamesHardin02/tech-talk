@@ -1,4 +1,4 @@
-var loginTimeout = function () {
+var idleTimeout = function () {
   var time;
   window.onload = resetTimer;
   // DOM Events
@@ -29,5 +29,5 @@ var loginTimeout = function () {
 };
 
 window.onload = function() {
-  loginTimeout();
+  idleTimeout();
 }
