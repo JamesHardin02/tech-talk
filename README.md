@@ -14,7 +14,6 @@ A blog site to talk about technology
 - create blog posts
 - upvote and comment on other's posts
 - edit your posts or delete them
-- homepage, dashboard, and login/signup page
 
 ## Screenshots
 Tech-Talk homepage
