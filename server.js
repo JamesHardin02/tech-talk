@@ -41,6 +41,6 @@ app.use('/public', express.static(path.join(__dirname, 'public')));
 app.use(require('./controllers/'));
 
 // connects to db via sequelize then starts server
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: true }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });

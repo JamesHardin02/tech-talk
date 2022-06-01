@@ -153,6 +153,16 @@ main {
   color: #7d7d7d;
 }
 
+.title-color{
+  width: fit-content;
+  background-color: #6eafff;
+  border: .25rem solid #225CA3;
+  border-radius: 16px;
+  padding: 5px;
+  color: black;
+  font-weight: bold;
+}
+
 .edit-link {
   display: block;
   margin: -1.5% 0 2% 0;
