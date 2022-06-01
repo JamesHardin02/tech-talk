@@ -13,7 +13,7 @@ const sequelize = require("./config/connection");
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 // connect session data to db (saves session token to db)
 const sess = {
-  secret: process.env.SS,
+  secret: 'Super secret secret',
   cookie: {},
   resave: false,
   saveUninitialized: true,
