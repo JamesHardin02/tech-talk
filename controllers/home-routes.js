@@ -29,6 +29,7 @@ router.get('/', (req, res) => {
     ]
   })
     .then(dbPostData => {
+      // serialize data for handlebars rendering
       const posts = dbPostData.map(post => post.get({ plain: true }));
 
       res.render('homepage', {
@@ -76,7 +77,7 @@ router.get('/post/:id', (req, res) => {
         res.status(404).json({ message: 'No post found with this id' });
         return;
       }
-
+      // serialize data for handlebars rendering
       const post = dbPostData.get({ plain: true });
 
       res.render('single-post', {
@@ -90,6 +91,7 @@ router.get('/post/:id', (req, res) => {
     });
 });
 
+// login page
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');

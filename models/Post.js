@@ -2,6 +2,8 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 // create our Post model
 class Post extends Model {
+  // method added to post as though it inherited it from Model via 'static'
+  // creates a vote in Vote model through the post that was voted on
   static upvote(body, models) {
     return models.Vote.create({
       user_id: body.user_id,

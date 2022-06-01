@@ -36,16 +36,19 @@ button:hover {
   background-color: #3486eb;
 }
 
+/* utility class used in login.handlebars */
 .flex{
   display: flex;
   justify-content: space-evenly;
 }
 
+/* "join the conversion" header */
 .login-page-h1{
   text-align: center;
   color: #0582b8;
 }
 
+/* image on login page */
 .tech-tree{
   width: 350px;
   height: 350px;
@@ -56,6 +59,7 @@ button:hover {
   font-weight: bold;
 }
 
+/* applied to homepage post feed */
 .post-list {
   margin: 0;
   padding: 0;
@@ -85,6 +89,7 @@ form label {
   display: block;
 }
 
+/* sets dimemsions for header, main, and footer in main handlebars layout */
 .wrapper {
   width: 100%;
   min-height: 100%;
@@ -175,6 +180,7 @@ main {
   background-color: #fff5eb;
 }
 
+/* meta styles meta data for posts and also the post's content */
 .comment .meta {
   font-size: 90%;
   margin-bottom: .5%;

@@ -1,5 +1,7 @@
+{{!-- generate a post-info partial with post data --}}
 {{> post-info post}}
 
+{{!-- comment and like functionality only for logged in users --}}
 {{#if loggedIn}}
 <form class="comment-form">
   <div>
@@ -13,6 +15,7 @@
 </form>
 {{/if}}
 
+{{!-- generate a comment partials with comment data --}}
 {{> comments post.comments}}
 
 {{#if loggedIn}}

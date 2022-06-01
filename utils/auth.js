@@ -1,3 +1,4 @@
+// middleware to verify whether a user is logged in or not
 const withAuth = (req, res, next) => {
   if (!req.session.user_id) {
     res.redirect('/login');

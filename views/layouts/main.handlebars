@@ -12,12 +12,16 @@
 </head>
 
 <body>
+  {{!-- wrapper sets dimensions for header, main, and footer --}}
   <div class="wrapper">
+    {{!-- header holds nav links --}}
     <header>
       <h1>
         <i class="fa-solid fa-globe"></i><a href="/">Tech-Talk</a>
       </h1>
       <nav>
+        {{!-- dashboard will route to login via middleware if not logged in --}}
+        {{!-- otherwise will route to user's dashboard --}}
         <a href="/dashboard">dashboard</a>
         {{#if loggedIn}}
         <button id="logout" class="btn-no-style">logout</button>
@@ -26,6 +30,7 @@
         {{/if}}
       </nav>
     </header>
+    {{!-- templates render here in main --}}
     <main>
       {{{ body }}}
     </main>
@@ -34,6 +39,7 @@
     </footer>
   </div>
   
+  {{!-- logout button functionality and idle logout timer --}}
   {{#if loggedIn}}
   <script src="/public/javascript/logout.js"></script>
   <script src="/public/javascript/idle-timeout.js"></script>

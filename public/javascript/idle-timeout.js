@@ -8,12 +8,15 @@ var idleTimeout = function () {
   document.onclick = resetTimer; 
   document.addEventListener('scroll', resetTimer, true);
 
+  // logout called after set time (5 minutes)
   async function logout() {
+    // destroys session
     const response = await fetch('/api/users/logout', {
       method: 'post',
       headers: { 'Content-Type': 'application/json' }
     });
   
+    // routes to homepage
     if (response.ok) {
       document.location.replace('/');
     } else {
@@ -28,6 +31,7 @@ var idleTimeout = function () {
   }
 };
 
+// whenever main.handlebars loads idleTimeout is called
 window.onload = function() {
   idleTimeout();
 }

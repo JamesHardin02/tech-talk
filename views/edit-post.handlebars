@@ -3,19 +3,25 @@
   <h2>
     Edit Post
   </h2>
+
   <form class="edit-post-form">
+    {{!-- title --}}
     <div>
       <input name="post-title" type="text" value="{{post.title}}" />
+      {{!-- format_url is a function found in helpers.js --}}
       <span>({{format_url post.post_url}})</span>
     </div>
+    {{!-- blog content --}}
     <div>
       <textarea id="post-content" name="post-content">{{post.content}}</textarea>
     </div>
+    {{!-- meta content of post --}}
     <div>
       {{post.vote_count}} {{format_plural "point" post.vote_count}} by you on {{format_date post.created_at}}
-      |
+      |                   {{!-- format_plural is a function found in helpers.js --}}
       <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
     </div>
+
     <button type="submit">Save post</button>
     <button type="button" class="delete-post-btn">Delete post</button>
   </form>
@@ -31,6 +37,7 @@
   </div>
 </form>
 
+{{!-- generate comment feed of post --}}
 {{> comments post.comments}}
 
 <script src="/public/javascript/edit-post.js"></script>

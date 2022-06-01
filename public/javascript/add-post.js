@@ -5,6 +5,7 @@ async function newFormHandler(event) {
   const content = document.querySelector('textarea[name="post-content"]').value
   const post_url = document.querySelector('input[name="post-url"]').value;
 
+  // creates post
   const response = await fetch(`/api/posts`, {
     method: 'POST',
     body: JSON.stringify({
@@ -17,6 +18,7 @@ async function newFormHandler(event) {
     }
   });
 
+  // user take to their dashboard to see their new post
   if (response.ok) {
     document.location.replace('/dashboard');
   } else {
