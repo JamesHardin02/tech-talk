@@ -18,10 +18,10 @@ A blog site to talk about technology
 
 ## Screenshots
 Tech-Talk homepage
-![tech-talk-homepage](https://user-images.githubusercontent.com/98061516/171489737-c65d86c3-8b88-4365-836f-3a16fc3d285d.png)
+![tech-talk-homepage](https://user-images.githubusercontent.com/98061516/171502701-83498de2-fe56-452d-a8c7-f993db6e0686.png)
 
 Tech-Talk user dashboard
-![tech-talk-dashboard](https://user-images.githubusercontent.com/98061516/171489743-acfad9f2-facd-4f99-a79c-235eab52a064.png)
+![tech-talk-dashboard](https://user-images.githubusercontent.com/98061516/171502709-15155214-77f5-4700-a702-c705c2bfc4cc.png)
 
 ## Website
 Link to Tech-Talk:
